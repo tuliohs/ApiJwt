@@ -5,11 +5,11 @@ using System.Text;
 using ApiJwt.Models;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ApiJwt.TokenService
+namespace ApiJwt.Services
 {
-    public static class TokenService
+    public static class TokenServices
     {
-        public static string GenerarToken(User user)
+        public static string GerarToken(User user)
         {
             //JwtSecurityTokenHandler - metodo que gera o token
             var tokenHandler = new JwtSecurityTokenHandler();
