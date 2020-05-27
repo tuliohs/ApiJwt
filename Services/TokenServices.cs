@@ -5,6 +5,7 @@ using System.Text;
 using ApiJwt.Models;
 using Microsoft.IdentityModel.Tokens;
 
+
 namespace ApiJwt.Services
 {
     public static class TokenServices
@@ -28,7 +29,7 @@ namespace ApiJwt.Services
                 }),
 
                 //Expires - quando o token expira
-                Expires = DateTime.UtcNow.AddHours(2),
+                Expires = DateTime.UtcNow.AddHours(1),
 
                 //SigningCredentials - parametros: SymmetricSecurityKey é a chave que será passada,  e o HmacSha256Signature é o algoritmos hash para encriptação
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
